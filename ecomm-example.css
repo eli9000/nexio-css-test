@@ -1,0 +1,9 @@
+.label {
+  font-weight: bold;
+  color: red;
+}
+
+.textBox {
+  padding: 5px;
+  background-color: blue;
+}
