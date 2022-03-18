@@ -33,12 +33,6 @@ body {
   visibility: hidden;
 }
 
-.error,
-#tokenexIframe.error {
-  border: 1px solid #ff0000;
-  border-radius: 2px;
-}
-
 #tokenexIframe {
   border: 1px solid #d3d3d3;
   height: 30px;
@@ -97,18 +91,47 @@ button#submitButton {
   -webkit-border-radius: 4px;
 }
 
+.fieldSet:first-child {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
 .fieldSet.error,
 .fieldSet#tokenexIframe.error {
-  border: 1px solid #ff0000;
+  border: 1px solid #ac2a1c;
 }
 
 .fieldSet .formRow {
-  margin: 5px;
+  margin: 5px 5px 20px;
   position: relative;
+}
+
+.fieldSet .formRow:last-child {
+  margin-bottom: 5px;
 }
 
 .fieldSet .formRow .textBox {
   width: 100%;
+  padding: 10px;
+  border: 1px solid #222;
+  border-radius: 10px;
+  font-size: 16px;
+  height: unset;
+}
+
+.fieldSet .formRow .textBox.error {
+  border: 1px solid #ac2a1c;
+}
+
+.fieldSet .formRow .label {
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.error,
+#tokenexIframe.error {
+  border: 1px solid #ac2a1c;
+  border-radius: 2px;
 }
 
 .fieldSet .field {
@@ -120,18 +143,19 @@ button#submitButton {
 }
 
 .fieldSet .requiredField {
-  color: #ff0000;
+  color: #ac2a1c;
 }
 
 .fieldSet select {
-  padding: 5px;
-  border: 1px solid lightgray;
-  border-radius: 2px;
+  padding: 10px;
+  border: 1px solid #222;
+  border-radius: 10px;
+  font-size: 16px;
 }
 
 .fieldSet select.error,
 .fieldSet select#tokenexIframe.error {
-  border: 1px solid #ff0000;
+  border: 1px solid #ac2a1c;
 }
 
 .fieldSet select.dropDown {
