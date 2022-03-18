@@ -1,9 +1,247 @@
-.label {
-  font-weight: bold;
-  color: red;
+html {
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
 }
 
-.textBox {
+input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 30px;
+  border: 1px solid #d3d3d3;
+  padding: 3px 3px 3px 6px;
+  font-family: monospace, Verdana, Arial;
+  font-size: 14px;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+#threeDSForm {
+  visibility: hidden;
+}
+
+.error,
+#tokenexIframe.error {
+  border: 1px solid #ff0000;
+  border-radius: 2px;
+}
+
+#tokenexIframe {
+  border: 1px solid #d3d3d3;
+  height: 30px;
+  width: 100%;
+  border-radius: 2px;
+}
+
+#logMsg,
+#errorMsg {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#paymentForm {
+  opacity: 0;
+  transition: opacity .2s;
+}
+
+#paymentForm.loaded {
+  opacity: 1;
+}
+
+label span {
+  color: #e1e1e1;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.label {
+  color: #1f1f1f;
+}
+
+button {
+  padding: 10px 40px;
+  background: #FFFFFF;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border: .5px solid #ccc;
+  border-radius: 3px;
+}
+
+button#submitButton {
+  margin-left: 2px;
+  color: #1f1f1f;
+}
+
+.fieldSet {
+  border: 1px solid #d3d3d3;
+  padding: 10px 10px 20px 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+
+.fieldSet.error,
+.fieldSet#tokenexIframe.error {
+  border: 1px solid #ff0000;
+}
+
+.fieldSet .formRow {
+  margin: 5px;
+  position: relative;
+}
+
+.fieldSet .formRow .textBox {
+  width: 100%;
+}
+
+.fieldSet .field {
+  margin: 20px 0 0;
+}
+
+.fieldSet .field.expirationMonth {
+  margin-right: 20%;
+}
+
+.fieldSet .requiredField {
+  color: #ff0000;
+}
+
+.fieldSet select {
   padding: 5px;
-  background-color: blue;
+  border: 1px solid lightgray;
+  border-radius: 2px;
+}
+
+.fieldSet select.error,
+.fieldSet select#tokenexIframe.error {
+  border: 1px solid #ff0000;
+}
+
+.fieldSet select.dropDown {
+  width: 100%;
+}
+
+.fieldSet select.dropDown.month,
+.fieldSet select.dropDown.year {
+  width: calc(50% - 10px);
+}
+
+@media screen and (min-width: 768px) {
+  .FormLeftColumn {
+    width: auto;
+    display: inline-block;
+    white-space: nowrap;
+    text-align: right;
+    vertical-align: top;
+    margin-right: 8px;
+    padding-top: 4px;
+  }
+}
+
+.grey {
+  color: #d3d3d3;
+  font-size: 12px;
+}
+
+#logMsg {
+  font-size: 12px;
+  color: #d3d3d3;
+}
+
+#errorMsg {
+  font-size: 12px;
+  color: rgba(255, 0, 0, 0.5);
+  display: none;
+}
+
+.validation {
+  display: none;
+  font-size: 11px;
+  background-color: #ffffff;
+  color: rgba(255, 0, 0, 0.5);
+}
+
+.validation.error,
+.validation#tokenexIframe.error {
+  display: inline-block;
+  border: 0;
+}
+
+.disclosures {
+  color: #ababab;
+  font-size: 10px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.disclosures a {
+  color: #ababab;
+  text-decoration: none;
+}
+
+input {
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
+
+input:focus {
+  outline: none !important;
+}
+
+input:hover {
+  cursor: text;
+}
+
+select:focus {
+  outline: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block !important;
+}
+
+.log {
+  position: absolute;
+  top: 0;
+  left: 15px;
+}
+
+#loader {
+  position: absolute;
+  top: 5px;
+  border: 1px solid #e1e1e1;
+  border-top: 1px solid #ababab;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  animation: spin .5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
